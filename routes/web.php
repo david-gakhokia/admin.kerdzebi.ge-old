@@ -39,10 +39,11 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function() {
 
     Route::resource('dashboard', DashboardController::class);
 
-
+//როლები
     Route::resource('roles', RoleController::class);
+//მომხამარებლები
     Route::resource('users', UserController::class);
-
+//პარამეტრები
     Route::get('setting',[SettingController::class,'index']);
     Route::post('setting',[SettingController::class,'save_settings']);
 
